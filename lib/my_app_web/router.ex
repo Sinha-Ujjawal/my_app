@@ -24,6 +24,7 @@ defmodule MyAppWeb.Router do
     pipe_through :browser
 
     live "/counter", LiveCounter
+    live "/emi", LiveEMICalculator
   end
 
   # Other scopes may use custom stacks.

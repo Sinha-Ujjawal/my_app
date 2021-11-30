@@ -9,6 +9,14 @@ header {
   @apply text-red-500 text-3xl font-bold italic text-center;
 }
 
+.slider-thumb::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 rounded-full bg-blue-500 cursor-pointer;
+}
+
+.slider-thumb::-webkit-slider-thumb:hover {
+  @apply bg-blue-700;
+}
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
