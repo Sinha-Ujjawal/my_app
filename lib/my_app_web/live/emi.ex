@@ -1,6 +1,8 @@
 defmodule MyAppWeb.LiveEMICalculator do
   use MyAppWeb, :live_view
 
+  @lac 1_00_000
+
   defmodule State do
     defstruct amount: 0, rate: 0.0, years: 0
   end
@@ -44,7 +46,7 @@ defmodule MyAppWeb.LiveEMICalculator do
     if z == 1 do
       0
     else
-      principle * 1_00_000 * r * z / (z - 1)
+      principle * @lac * r * z / (z - 1)
     end
     |> ceil()
   end
